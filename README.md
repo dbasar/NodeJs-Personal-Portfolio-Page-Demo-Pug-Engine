@@ -1,6 +1,6 @@
 # NodeJS-Personal-Portfolio-Page-Demo
 
-By Doruk Başar.
+By Doruk Başar. <br>
 <br>
 This is the demo of the personal webpage I had created for my spouse using Node.js. <br>
 The project uses static CSS and JS files from the public folder, creates HTML files using pug template engine and loads them according to the provided url. <br>
