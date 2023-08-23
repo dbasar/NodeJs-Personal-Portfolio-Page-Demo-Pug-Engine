@@ -8,7 +8,7 @@ In order to make the site include both English and Turkish pages, I've created t
 <br>
 The exact design is also used in a static page (in Turkish language) that I've created and put in this repository: <br>
 https://ozlemyb.github.io/ <br>
-This project is the continuation of another project that I've made using static HTML files, which is provided it on this repository: <br>
+This project is the continuation of another project that I've made using static HTML files, which is provided on this repository: <br>
 https://github.com/dbasar/NodeJs-Personal-Portfolio-Page-Demo-Pug-Engine <br>
 <br>
 To be able to view the project, you need to do the following: <br>
