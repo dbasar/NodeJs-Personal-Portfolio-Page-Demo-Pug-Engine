@@ -1,0 +1,15 @@
+extends layout.pug 
+
+block links
+    link(rel="stylesheet" href="styles/main-subpage.css")
+
+block main 
+    main.about 
+        h1 
+            span= content.pageHead
+        p= content.paraOne
+        p= content.paraTwo
+        footer
+            span.copy Özlem Yeşildal Başar &copy; 2022
+
+block scripts 

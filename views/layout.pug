@@ -1,0 +1,67 @@
+doctype html 
+html(lang="en")
+    head 
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="author" content="Doruk Başar")
+
+        title= content.title
+
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat&display=swap" rel="stylesheet") 
+        link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet")
+
+        link(rel="stylesheet" href="styles/general-components.css")
+        link(rel="stylesheet" href="styles/top-bar.css")
+        link(rel="stylesheet" href="styles/header.css")
+        block links    
+        link(rel="stylesheet" href="styles/res-380px.css")
+        link(rel="stylesheet" href="styles/res-700px.css")
+        link(rel="stylesheet" href="styles/res-950px.css")
+        link(rel="stylesheet" href="styles/res-1150px.css")
+        link(rel="stylesheet" href="styles/res-1250px.css")
+
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+
+    body.fade(class=`${pageType}`)  
+        header 
+            div#menu-logo.logo
+                a(href="/")
+                    span Özlem 
+                    span Yeşildal Başar
+            nav 
+                ul 
+                    li 
+                        a(href="/furniture")= header.navLiFurniture
+                    li
+                        a(href="/industrial-design")= header.navLiIDesign
+                    li 
+                        a(href="/about")= header.navLiAbout
+                    li 
+                        a(href="/contact")= header.navLiContact
+                    li.brands 
+                        a(href="#") #[i.fa.fa-facebook]
+                        a(href="#") #[i.fa.fa-instagram]
+                        a(href="#") #[i.fa.fa-twitter]
+            footer 
+                a(href=`${langChange}`) EN/TR
+                
+        div#top-bar
+            span
+
+        block main
+
+        script(src="scripts/page-main-components.js")
+        script(src="scripts/menu-switch.js")
+        block scripts
+        script(src="scripts/page-load.js")
+        script.
+            const navListItems = document.querySelectorAll('nav ul li');
+            const hrefsArr = Array.from(navListItems, (li) => li.firstElementChild.getAttribute('href'));
+            const url = "#{url}";
+
+            if (hrefsArr.indexOf(url) > -1) {
+                navListItems[hrefsArr.indexOf(url)].classList.add('selected');
+            }

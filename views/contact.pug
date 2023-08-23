@@ -1,0 +1,28 @@
+extends layout.pug 
+
+block links 
+    link(rel="stylesheet" href="styles/main-subpage.css")
+
+block main 
+    main.contact 
+        h1 
+            span= content.pageHead
+        form
+            input(type="text" placeholder=`${content.namePlaceholder}`)
+            input(type="text" placeholder=`${content.surnamePlaceholder}`)
+            input(type="email" placeholder="Mail")
+            textarea(name="" id="" cols="30" rows="10" placeholder=`${content.commentPlaceholder}`)
+            button(type="submit")= content.submitText 
+        address 
+            a#tel-link(title=`${content.telLinkTitle}` href="tel:+905372786778" target="_blank") (+90) 537 278 67 78
+            br
+            a#mail-link(href="mailto:yesildalozlem@gmail.com" target="_blank") yesildalozlem@gmail.com
+            br 
+            | Bursa, Türkiye
+            
+        footer
+            span.copy Özlem Yeşildal Başar &copy; 2022
+
+block scripts
+    script(src="scripts/contact-form&links.js")
+

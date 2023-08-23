@@ -1,0 +1,26 @@
+extends layout.pug 
+    
+block links
+    link(rel="stylesheet" href="styles/main-homepage.css")
+
+block main
+    main 
+        #content-logo.logo 
+            span Özlem
+            span Yeşildal Başar
+        #hero-header
+            .image-div(style="opacity: 1;")
+            .image-div
+            .image-div
+            .image-div
+        #hero-link.fade
+            a(href="") 
+                span(data-furniture=`${content.furnitureSpan}` data-industrial=`${content.industrialSpan}`)
+                span
+                span= content.designsSpan
+        footer 
+            span#home-copy-small &copy; 2022
+            span#home-copy-large Özlem Yeşildal Başar &copy; 2022
+    
+block scripts    
+    script(src="scripts/homepage-slideshow.js")
